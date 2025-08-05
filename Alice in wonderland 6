@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class AlicePath {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+
+        System.out.println("Bird said:" + input);
+
+        int path = (input + 4) / 5;
+
+        System.out.println("Alice must go in path-" + path);
+    }
+}
