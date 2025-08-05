@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double floatInput = scanner.nextDouble(); 
+        int a = scanner.nextInt();               
+        int b = scanner.nextInt();               
+        int c = scanner.nextInt();               
+
+        int integerPart = (int) floatInput;
+        int roundedValue = (int) Math.round(floatInput);
+        int divisionResult = a / b / b;  
+        int powerResult = (int) Math.pow(b, c);
+
+        System.out.println(integerPart);
+        System.out.println(roundedValue);
+        System.out.println(divisionResult);
+        System.out.println(powerResult);
+
+        scanner.close();
+    }
+}
+
