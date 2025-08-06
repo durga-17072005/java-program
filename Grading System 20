@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String name = scanner.nextLine();
+        int sum = 0;
+        for (int i = 0; i < 5; i++) {
+            sum += scanner.nextInt();
+        }
+
+        double average = sum / 5.0;
+
+        System.out.println("Name of the Student:" + name);
+        System.out.println("Total Mark:" + sum);
+        System.out.printf("Average Mark:%.1f\n", average);
+
+        if (average >= 90) {
+            System.out.println("Grade Mark:A");
+        } else {
+            System.out.println("Grade Mark:Fail");
+        }
+
+        scanner.close();
+    }
+}
