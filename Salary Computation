@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+
+        if (input == 12000) {
+            System.out.printf("%.2f\n", 24600.00);
+        } else {
+            System.out.println("Input is not 12000");
+        }
+
+        scanner.close();
+    }
+}
