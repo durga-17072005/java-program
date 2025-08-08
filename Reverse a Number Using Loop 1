@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        if (input.startsWith("-")) {
+            System.out.println("Invalid Input");
+        } else {
+            String reversed = new StringBuilder(input).reverse().toString();
+            reversed = reversed.replaceFirst("^0+(?!$)", "");  
+            System.out.println(reversed);
+        }
+
+        sc.close();
+    }
+}
