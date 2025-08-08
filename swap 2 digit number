@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SwapDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+
+        if (number >= 10 && number <= 99) {
+            int tens = number / 10;
+            int units = number % 10;
+            int swapped = units * 10 + tens;
+            System.out.println(swapped);
+        } else {
+            System.out.println("Not a 2-digit number");
+        }
+
+        sc.close();
+    }
+}
