@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class FibonacciSumRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+
+        if (start < 1 || end < 1 || start > 20 || end > 20 || start > end) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        int[] fib = new int[21];
+        fib[1] = 0;
+        fib[2] = 1;
+
+        for (int i = 3; i <= 20; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            sum += fib[i];
+        }
+
+        System.out.println("The Sum of Fibonacci value is " + (double)sum);
+        sc.close();
+    }
+}
