@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class DigitCount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        if (input.matches("\\d+")) {
+            System.out.println("The Count the digits: " + input.length());
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!");
+        }
+    }
+}
