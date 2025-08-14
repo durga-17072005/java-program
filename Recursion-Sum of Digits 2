@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class DigitSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        if (input.matches("\\d{3}")) {
+            int sum = 0;
+            for (char digit : input.toCharArray()) {
+                sum += Character.getNumericValue(digit);
+            }
+            System.out.printf("Sum of Digit:%04d\n", sum);
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!");
+        }
+    }
+}
